@@ -44,6 +44,9 @@ java -cp "src;lib/*" org.junit.runner.JUnitCore pruebas.GameTest
 
 Abrir el archivo de astah que se descargara al clonar el repositorio
 
+## **IMPORTANTE**
+En caso de no funcionar la ejecución desde consola, se recomienda abrir los .java en un editor IDE y ejecutar el HARDESTGAMEGUI.java y así abre el juego para consultar y observar que se cumplen todos los requisitos.
+
 # Reporte de Test coverage 
 
 ## Analisis de cobertura pruebas
@@ -485,6 +488,13 @@ Las principales referencias utilizadas durante el desarrollo del proyecto fueron
 La referencia más importante durante el proyecto fue el enunciado y las retroalimentaciones realizadas durante las sustentaciones, ya que estas guiaron gran parte de las decisiones relacionadas con arquitectura, modularidad y aplicación de principios de diseño.
 
 Adicionalmente, se utilizó la documentación oficial de Java como apoyo para comprender el funcionamiento de bibliotecas relacionadas con colecciones, gráficos, eventos, temporizadores y manejo de archivos. También se consultaron recursos oficiales y documentación técnica relacionada con Git, GitHub, JUnit y JaCoCo para apoyar los procesos de pruebas y control de versiones.
+
+
+# Autores 
+# Cristian Santiago Moreno Ruiz
+# David Alejandro Contreras Delgado
+# Dopo 2026-1 
+# Profesor Juan Sebastian Frasica Galeano
 
 
 
