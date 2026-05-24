@@ -2,7 +2,47 @@
 
 <img width="722" height="284" alt="image" src="https://github.com/user-attachments/assets/7d56badd-2a4d-460d-ab47-b502558a46b7" />
 
-## Repositorio del proyecto final de dopo 2026-1
+# Guia de Comandos para ejecutar el juego y pruebas desde consola
+
+## 1. Clonar este repositorio
+
+* Abrir una terminal y ejecutar el siguiente comando para clonar el repositorio del proyecto:
+* Ejecutar el comnando: git clone https://github.com/cristianmorenor/ProyectoFinalDopoContrerasMoreno.git
+* Una vez descargado el repositorio, ingresar a la carpeta del proyecto: cd ProyectoFinalDopoContrerasMoreno
+
+## 2. Ubicarse en la raíz del proyecto (ProyectoFinalDopoContrerasMoreno) y compilar todos los archivos .java.
+
+* En macOS ejecutar: find src -name "*.java" > sources.txt
+                      javac @sources.txt
+* En windows ejecutar: dir /s /B src\*.java > sources.txt
+                      javac @sources.txt
+
+## 3.Ejecutar el videojuego
+
+* Una vez compilado el proyecto, ejecutar el siguiente comando desde la raíz del repositorio: java -cp src presentacion.Main
+
+## 4. Ejecutar las pruebas unitarias
+
+Las pruebas unitarias del proyecto se encuentran dentro del paquete: src/pruebas
+
+## Para macOS
+Para ejecutar todas las pruebas: 
+java -cp "src:lib/*" org.junit.runner.JUnitCore pruebas.GameTest pruebas.LevelTest pruebas.PlayerTest pruebas.MapLoaderTest pruebas.PvPModeTest
+
+Para ejecutar una prueba especifica por ejemplo:
+java -cp "src:lib/*" org.junit.runner.JUnitCore pruebas.GameTest
+
+## Para windows:
+
+Para ejecutar todas las pruebas: 
+java -cp "src;lib/*" org.junit.runner.JUnitCore pruebas.GameTest pruebas.LevelTest pruebas.PlayerTest pruebas.MapLoaderTest pruebas.PvPModeTest
+
+Para ejecutar una prueba especifica por ejemplo:
+java -cp "src;lib/*" org.junit.runner.JUnitCore pruebas.GameTest
+
+## Consultar UML
+
+Abrir el archivo de astah que se descargara al clonar el repositorio
 
 # Reporte de Test coverage 
 
