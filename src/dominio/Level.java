@@ -382,6 +382,5 @@ public class Level {
      * @deprecated Usar {@link #getEnemies()} en código nuevo.
      * @return lista de obstáculos (vacía — los enemigos son Enemy, no Obstacle).
      */
-    @Deprecated
-    public List<Obstacle> getObstacles() { return new ArrayList<>(); }
+  
 }

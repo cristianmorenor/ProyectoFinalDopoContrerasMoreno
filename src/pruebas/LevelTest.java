@@ -279,11 +279,6 @@ public class LevelTest {
     }
 
     @Test
-    public void shouldGetObstaclesReturnEmpty() {
-        assertTrue("getObstacles() debe retornar lista vacía", level.getObstacles().isEmpty());
-    }
-
-    @Test
     public void shouldHaveBothTypesOfEnemyInLevel1() {
         boolean hasBasic  = level.getEnemies().stream().anyMatch(e -> e instanceof BasicEnemy);
         boolean hasFast   = level.getEnemies().stream().anyMatch(e -> e instanceof FastEnemy);
