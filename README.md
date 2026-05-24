@@ -278,6 +278,69 @@ De igual manera, el proceso de análisis estático ayudó a fortalecer la cohere
 
 Finalmente, los resultados obtenidos evidencian que el proyecto alcanzó un nivel adecuado de calidad estructural y mantenibilidad, demostrando una evolución constante durante el proceso de desarrollo. La combinación entre refactorización, pruebas y análisis estático permitió construir una solución más robusta, preparada para futuras extensiones y consistente con los objetivos académicos y técnicos planteados desde el inicio del proyecto.
 
+# Diagrama de clases UML
+
+El resultado final del diagrama de clases en UML de la capa de dominio especifica tras sus respectivos refactors y ajustes quedó de la forma:
+
+<img width="907" height="644" alt="image" src="https://github.com/user-attachments/assets/07e72db1-72b7-467b-9bfc-6b21ead121d6" />
+
+El archivo UML puede ser consultado en este repositorio y descargado para su más profunda revisión.
+
+# Patrones de Diseño usados
+
+## Introducción
+
+Durante el desarrollo del proyecto se implementaron distintos patrones de diseño con el objetivo de mejorar la modularidad, extensibilidad, reutilización y mantenibilidad del sistema. La utilización de estos patrones permitió construir una arquitectura más organizada y flexible, facilitando la incorporación de nuevas funcionalidades sin afectar significativamente los componentes ya existentes.
+
+Los patrones aplicados se relacionan principalmente con la gestión de comportamientos dinámicos, creación de objetos, reutilización de estructuras comunes y separación de responsabilidades dentro de la arquitectura orientada a objetos del videojuego.
+
+## 1. Strategy Pattern
+Uno de los patrones más importantes implementados en el proyecto fue el patrón Strategy, utilizado principalmente en las clases relacionadas con los modos de juego.
+
+Este patrón se encuentra representado mediante la interfaz GameMode y sus diferentes implementaciones, como PvPMode y PvMachineMode. La idea principal detrás de esta implementación fue encapsular diferentes comportamientos de juego dentro de clases independientes, permitiendo cambiar dinámicamente la lógica del sistema dependiendo del modo seleccionado.
+
+Gracias a este patrón, la clase principal del juego no necesita conocer los detalles específicos de cada modo de juego, sino únicamente interactuar con la abstracción GameMode. Esto permitió reducir el acoplamiento y aumentar la extensibilidad del sistema, facilitando la posibilidad de agregar nuevos modos de juego en el futuro sin modificar las clases ya existentes.
+
+De manera similar, este patrón también puede observarse en las implementaciones relacionadas con inteligencia artificial mediante la interfaz AIPlayer y clases como RandomAI o ExpertAI, donde diferentes estrategias de comportamiento automático pueden ser intercambiadas dinámicamente según el contexto del juego.
+
+## 2.Factory Method
+
+El patrón Factory fue implementado mediante la clase PlayerFactory, encargada de centralizar la creación de jugadores dentro del sistema.
+
+La utilización de esta fábrica permitió desacoplar la lógica de creación de objetos del resto de la aplicación, evitando que múltiples clases deban instanciar directamente jugadores concretos como RedPlayer, BluePlayer o GreenPlayer ( ver en la capa de dominio )
+
+Gracias a esta solución, el sistema puede crear distintos tipos de jugadores de manera controlada y centralizada, mejorando la mantenibilidad y permitiendo futuras extensiones sin afectar otras partes del código.
+
+La implementación de este patrón también contribuyó a reducir duplicación y fortalecer la cohesión del sistema.
+
+## 3. MVC
+
+El proyecto implementa una arquitectura inspirada en el patrón MVC mediante la separación de paquetes en:
+
+* dominio
+* presentacion
+* persistencia
+
+La capa dominio contiene la lógica principal del juego y las reglas de negocio. La capa presentacion administra la interfaz gráfica y el renderizado visual mediante Swing. Finalmente, la capa persistencia encapsula responsabilidades relacionadas con carga de mapas, guardado de información y manejo de archivos.
+
+Por lo que existe esta separación y asi se logra el uso de este patrón de diseño 
+
+## 4. Uso de Interfaces y polimorfismo como Patrón Arquitectónico
+
+El uso de interfaces dentro del proyecto constituye una de las decisiones arquitectónicas más importantes implementadas durante el desarrollo.
+
+Interfaces como Collidable, Movable, Collectible y AIPlayer permitieron desacoplar comportamientos específicos de las implementaciones concretas, favoreciendo la reutilización y extensibilidad del sistema.
+
+Gracias a esto, fue posible agregar nuevos tipos de enemigos, monedas, entidades y comportamientos sin necesidad de modificar significativamente la arquitectura existente, respetando principios como Open/Closed y programación orientada a abstracciones.
+
+Por medio de esto  esto el proyecto hace un uso extensivo de diseño polimórfico mediante interfaces y jerarquías de herencia.
+
+Por ejemplo, CollisionManager puede trabajar de manera genérica con cualquier objeto que implemente Collidable, independientemente de si se trata de un jugador, enemigo, moneda, bomba o pared. De esta forma, las interacciones del sistema se basan en abstracciones y no en clases específicas.
+
+La utilización de polimorfismo permitió además facilitar la extensibilidad futura del sistema y reducir considerablemente el acoplamiento entre componentes.
+
+
+
 
 
 
