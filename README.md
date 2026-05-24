@@ -1,4 +1,7 @@
 # ProyectoFinalDopoContrerasMoreno
+
+<img width="722" height="284" alt="image" src="https://github.com/user-attachments/assets/7d56badd-2a4d-460d-ab47-b502558a46b7" />
+
 ## Repositorio del proyecto final de dopo 2026-1
 
 # Reporte de Test coverage 
@@ -378,6 +381,71 @@ Este proceso permitió comprender la importancia de analizar cuidadosamente los 
 El proyecto también permitió adquirir experiencia utilizando diferentes entornos de desarrollo y herramientas de edición como Eclipse y Visual Studio Code. Esto ayudó a comprender las ventajas y limitaciones de cada entorno dependiendo de las necesidades específicas del proyecto, especialmente en aspectos relacionados con depuración, ejecución de pruebas, integración con Git, manejo de proyectos Java y edición rápida de archivos.
 
 Además, trabajar con distintos IDEs permitió fortalecer la capacidad de adaptación y asegurar que el proyecto pudiera mantenerse funcional independientemente de la herramienta utilizada para editar o ejecutar el código. Esta experiencia resultó valiosa para entender la importancia de desarrollar proyectos portables y correctamente organizados, facilitando futuras migraciones o integraciones dentro de otros entornos de desarrollo.
+
+# Retrospectiva 
+
+## 1. ¿Cuáles fueron los mini-ciclos definidos?
+
+Los mini-ciclos definidos durante el desarrollo del proyecto comenzaron inicialmente con un análisis detallado del problema y de los requerimientos planteados en el enunciado. En esta etapa se buscó comprender la lógica del videojuego, las funcionalidades esperadas y la arquitectura que sería necesaria para construir una solución organizada y extensible.
+
+Posteriormente, se realizó el diseño del modelo UML utilizando Astah, definiendo las principales clases, relaciones, interfaces, jerarquías de herencia y separación por capas del sistema. Durante este proceso se establecieron componentes fundamentales como jugadores, enemigos, modos de juego, colisiones, persistencia y elementos del mapa.
+
+El siguiente mini-ciclo estuvo enfocado en la implementación progresiva de la lógica principal del juego, iniciando con las clases base del dominio y posteriormente integrando nuevas funcionalidades como inteligencia artificial, monedas especiales, checkpoints, bombas, paredes y modos de juego.
+
+Finalmente, se desarrollaron procesos de refactorización, pruebas unitarias, análisis estático y optimización arquitectónica, permitiendo mejorar la modularidad, extensibilidad y calidad general del sistema.
+
+## 2. ¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿Por qué?
+
+Actualmente el proyecto se encuentra en una etapa avanzada de desarrollo, debido a que la mayoría de los mini-ciclos planteados inicialmente fueron completados satisfactoriamente. La lógica principal del videojuego se encuentra implementada, incluyendo movimiento, colisiones, inteligencia artificial, persistencia, múltiples entidades y modos de juego.
+
+Además, durante los últimos ciclos se realizaron mejoras importantes relacionadas con refactorización y arquitectura orientada a objetos, incorporando interfaces, clases abstractas, herencia, polimorfismo y patrones de diseño para fortalecer la calidad del sistema.
+
+El proyecto también alcanzó una etapa importante de validación mediante pruebas unitarias y análisis de cobertura, logrando un porcentaje alto de cobertura sobre la capa de dominio. Esto demuestra que gran parte de las funcionalidades críticas fueron correctamente probadas y estabilizadas.
+
+## 3. ¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+
+El tiempo invertido total por entrega fue de aproximadamete Cristian: 8 horas David : 8 horas y para la final fue de 10 horas cada uno
+
+## 4.¿Cuál considera fue el mayor logro? ¿Por qué?
+
+Consideramos que uno de los mayores logros del proyecto fue la evolución progresiva de la arquitectura hacia una solución mucho más modular, extensible y organizada. Inicialmente el sistema poseía una estructura más simple; sin embargo, a medida que avanzó el desarrollo se logró implementar correctamente conceptos avanzados de Programación Orientada a Objetos como herencia, abstracción, polimorfismo e interfaces.
+
+Otro logro importante fue la capacidad de integrar múltiples funcionalidades dentro de un mismo sistema, incluyendo inteligencia artificial, persistencia, diferentes tipos de enemigos, modos de juego, colisiones y pruebas automatizadas, manteniendo una arquitectura relativamente desacoplada y mantenible.
+
+Asimismo, el trabajo colaborativo y la buena comunicación dentro del equipo permitieron organizar correctamente las responsabilidades y mantener avances constantes durante el desarrollo.
+
+## 5. ¿Cuál considera que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+
+Uno de los mayores problemas técnicos encontrados durante el proyecto estuvo relacionado con la evolución y refactorización de la arquitectura del sistema. A medida que el proyecto creció, varias clases comenzaron a asumir demasiadas responsabilidades y surgieron estructuras que ya no se alineaban correctamente con los principios de diseño planteados inicialmente.
+
+Esto generó problemas relacionados con acoplamiento, duplicación de lógica y dificultad para extender ciertas funcionalidades. Para resolverlo, se realizaron múltiples procesos de refactorización orientados a reorganizar la arquitectura mediante el uso de interfaces, clases abstractas, patrones de diseño y separación adecuada de responsabilidades.
+
+Otro problema importante estuvo relacionado con el control de versiones y sincronización del trabajo colaborativo. Para solucionarlo se fortaleció el uso de Git y GitHub como herramientas principales de integración y manejo del código fuente, permitiendo reducir conflictos y mejorar la organización del proyecto.
+
+## 6. ¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+
+Como equipo consideramos que uno de los aspectos más positivos fue la comunicación constante durante el desarrollo del proyecto. Esto permitió tomar decisiones arquitectónicas de manera conjunta, dividir responsabilidades y coordinar correctamente las distintas etapas de implementación.
+
+También fue importante la capacidad de adaptarse a cambios y retroalimentaciones recibidas durante las sustentaciones, utilizando dichas observaciones para mejorar progresivamente la calidad técnica y estructural del sistema.
+
+Para mejorar futuros resultados consideramos importante fortalecer aún más la planificación y gestión del tiempo, especialmente en tareas relacionadas con documentación, pruebas y refactorización. Asimismo, sería beneficioso definir con mayor anticipación ciertas decisiones arquitectónicas para reducir retrabajos durante etapas avanzadas del desarrollo.
+
+## 7. Considerando las prácticas XP incluidas en los laboratorios, ¿cuál fue la más útil? ¿Por qué?
+
+a práctica XP que consideramos más útil durante el desarrollo del proyecto fue Pair Programming, debido a que permitió discutir decisiones técnicas en tiempo real, detectar errores más rápidamente y mantener una visión compartida sobre la arquitectura y funcionalidades implementadas.
+
+Trabajar colaborativamente durante varias etapas del desarrollo ayudó a mejorar la calidad del código, reducir inconsistencias y facilitar la resolución de problemas complejos relacionados con lógica del juego, diseño orientado a objetos y refactorización.
+
+Además, esta práctica permitió fortalecer el aprendizaje conjunto y mejorar la comprensión general del sistema por parte de ambos integrantes del equipo.
+
+## 8. ¿Qué referencias usaron? ¿Cuál fue la más útil? 
+
+Las principales referencias utilizadas durante el desarrollo del proyecto fueron el enunciado oficial del problema, el material proporcionado durante las clases y la documentación oficial de Java. También se consultaron recursos relacionados con Programación Orientada a Objetos, patrones de diseño, pruebas unitarias y desarrollo de interfaces gráficas con Swing.
+
+La referencia más importante durante el proyecto fue el enunciado y las retroalimentaciones realizadas durante las sustentaciones, ya que estas guiaron gran parte de las decisiones relacionadas con arquitectura, modularidad y aplicación de principios de diseño.
+
+Adicionalmente, se utilizó la documentación oficial de Java como apoyo para comprender el funcionamiento de bibliotecas relacionadas con colecciones, gráficos, eventos, temporizadores y manejo de archivos. También se consultaron recursos oficiales y documentación técnica relacionada con Git, GitHub, JUnit y JaCoCo para apoyar los procesos de pruebas y control de versiones.
+
 
 
 
