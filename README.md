@@ -206,6 +206,78 @@ Asimismo, el proceso de pruebas contribuyó significativamente a fortalecer la m
 
 Finalmente, la cobertura alcanzada demuestra que la arquitectura implementada fue diseñada considerando criterios de calidad de software, mantenibilidad y capacidad de prueba, consolidando un proyecto estructurado bajo buenas prácticas de ingeniería de software y nuestra materia de Desarollo Orientado por Objetos.
 
+# Reporte de Análisis Estático 
+
+## objetivo del análisis estático 
+
+Con el propósito de mejorar la calidad, mantenibilidad y robustez del proyecto, se realizó un análisis estático del código fuente enfocado principalmente en la capa de dominio y en la arquitectura general del sistema.
+
+El análisis permitió identificar problemas relacionados con clases obsoletas, código redundante, posibles conflictos arquitectónicos,
+y componentes que ya no hacían parte activa de la lógica principal del videojuego.
+
+Además, este proceso ayudó a fortalecer la organización del proyecto y mejorar la coherencia entre la implementación final y el diseño orientado a objetos planteado durante el desarrollo y tambien la coherencia entre el diseño relacionado con el UML en la herramienta astah el cual puede ser descargado y consultado en este repositorio.
+
+## Observaciones y hallazgos
+
+Durante las primeras etapas del análisis se identificó la existencia de varias clases heredadas de versiones iniciales del proyecto que ya no participaban activamente en la arquitectura final del sistema. Estas clases permanecían dentro del repositorio debido a procesos de refactorización y evolución progresiva del diseño por lo que se había olvidado tomar decisiones sobre estas clases obsoletas. 
+
+Entre los principales casos encontrados se identificaron clases relacionadas con implementaciones antiguas de enemigos y objetivos del juego como por ejemplo se encontraba Obstacle.java y sus clases hijas FastObstacle.java y BasicObstacle.java , las cuales habían sido reemplazadas posteriormente por nuevas abstracciones más coherentes con el dominio actual del proyecto. La permanencia de estos componentes generaba:
+
+* duplicidad conceptual
+* advertencias innecesarias
+* baja cobertura de pruebas,
+* conflictos dentro del análisis estático
+
+Como resultado, se tomó la decisión de eliminar o desacoplar dichas clases obsoletas, permitiendo reducir significativamente la cantidad de advertencias y mejorar la consistencia arquitectónica del sistema puesto que esto tambien estaba afectando la cobertura de las pruebas que teniamos ya que las pruebas si habian evolucionado y se habian hecho para las ultimas versiones y se habian olvidado para estas clases viejas y asi la cobertura estaba bajando considerablemente.
+
+El análisis realizado permitió evidenciar que gran parte de las advertencias iniciales no estaban asociadas necesariamente a errores funcionales, sino a residuos de versiones anteriores del diseño o a componentes temporales utilizados durante procesos de refactorización.
+
+También se identificó que algunas clases centrales del sistema, como Level y ciertos componentes gráficos de la capa presentacion, poseen naturalmente una complejidad mayor debido a la cantidad de responsabilidades y entidades que administran. Esto resulta esperable dentro de un proyecto de videojuegos con múltiples sistemas interactuando simultáneamente.
+
+Adicionalmente, la presencia de interfaces, herencia y polimorfismo incrementó la modularidad del proyecto, facilitando la extensibilidad futura y reduciendo la necesidad de modificar componentes existentes ante nuevas funcionalidades que puedan surgir más adelante.
+
+## Mejoras Arquitectonicas
+
+Ademas de las respectivas eliminaciones de clasess residuales que se hicieron el análisis estático también permitió validar varias mejoras realizadas durante el desarrollo del proyecto. Entre las más importantes se encuentran:
+
+* migración desde estructuras simples hacia jerarquías de herencia más robustas
+* implementación de interfaces para desacoplar comportamientos
+* separación adecuada entre dominio, presentación y persistencia
+* centralización de responsabilidades mediante clases especializadas
+
+Especificamente meidante la transición desde modelos antiguos basados en obstáculos genéricos hacia una jerarquía de enemigos (Enemy) permitió obtener una arquitectura más extensible, modular y alineada con principios de Programación Orientada a Objetos.
+
+De igual manera, la introducción de componentes como CollisionManager, GameMode, PlayerFactory y las interfaces Collidable, Movable y Collectible contribuyó a disminuir el acoplamiento entre clases y mejorar la organización general del código pues se estaban separando las responsibilidades y unificando logica y congruencia con el diseño de UML realizado. 
+
+## Evaluacion de calidad
+
+El análisis estático permitió mejorar considerablemente la calidad general del proyecto, especialmente después de la eliminación de clases obsoletas y la consolidación de una arquitectura más limpia y coherente.
+
+La reducción de advertencias y conflictos reflejó una evolución positiva del diseño, evidenciando un proceso constante de refactorización orientado a fortalecer principios de mantenibilidad, modularidad y reutilización de código.
+
+Asimismo, la estructura final del sistema demuestra un uso adecuado de conceptos de Programación Orientada a Objetos como:
+
+* abstracción
+* herencia
+* encapsulamiento
+* polimorfismo
+* separación de responsabilidades.
+
+La arquitectura obtenida facilita la incorporación de nuevas funcionalidades, la creación de nuevos tipos de entidades y la evolución futura del videojuego sin afectar significativamente los componentes ya implementados haciendo asi que se cumpla parte de los requisitos que hacian falta por cubir del enunciado de proyecto que se proporcionó al inicio del desarrollo del proyecto.
+
+
+## Conclusiones
+
+El análisis estático realizado a lo largo del desarrollo del proyecto permitió identificar y corregir múltiples aspectos relacionados con la calidad y organización del código fuente. Este proceso no solo ayudó a detectar advertencias y posibles conflictos arquitectónicos, sino que también evidenció la evolución progresiva del sistema hacia una estructura más sólida y coherente con los principios de Programación Orientada a Objetos.
+
+Uno de los resultados más importantes obtenidos fue la identificación de clases heredadas de versiones iniciales del proyecto que ya no participaban activamente en la lógica final del videojuego. La eliminación y refactorización de estos componentes permitió reducir significativamente conflictos y redundancias dentro del sistema, mejorando tanto la mantenibilidad como la claridad de la arquitectura implementada.
+
+Asimismo, el análisis permitió consolidar una estructura más modular y extensible, basada en el uso adecuado de abstracción, herencia, interfaces y polimorfismo. Componentes como Enemy, GameMode, CollisionManager y las diferentes interfaces implementadas reflejan una arquitectura orientada a la reutilización de código y a la separación clara de responsabilidades, facilitando la incorporación de nuevas funcionalidades sin afectar el comportamiento existente del sistema.
+
+De igual manera, el proceso de análisis estático ayudó a fortalecer la coherencia entre el diseño UML y la implementación final del proyecto, permitiendo mantener una relación más clara entre el modelo conceptual y el código desarrollado. Esto contribuyó a obtener un sistema más organizado, comprensible y alineado con buenas prácticas de ingeniería de software.
+
+Finalmente, los resultados obtenidos evidencian que el proyecto alcanzó un nivel adecuado de calidad estructural y mantenibilidad, demostrando una evolución constante durante el proceso de desarrollo. La combinación entre refactorización, pruebas y análisis estático permitió construir una solución más robusta, preparada para futuras extensiones y consistente con los objetivos académicos y técnicos planteados desde el inicio del proyecto.
+
 
 
 
