@@ -5,7 +5,7 @@
 
 ## Analisis de cobertura pruebas
 
-Con el objetivo de evaluar la calidad, confiabilidad y robustez del proyecto, se realizó un análisis de cobertura de pruebas enfocado principalmente en la capa de dominio (dominio), la cual concentra la lógica principal del videojuego y los componentes más relevantes desde el punto de vista arquitectónico y funcional. Este análisis permitió identificar qué tan efectivamente las pruebas unitarias desarrolladas validan el comportamiento del sistema y qué tan protegida se encuentra la lógica principal frente a posibles errores o regresiones futuras.
+Con el objetivo de evaluar la calidad, confiabilidad y robustez del proyecto, se realizó un análisis de cobertura de pruebas enfocado principalmente en la capa de dominio (dominio la cual se pueden consultar sus clases y subclases dentro de este repositorio en la carpeta src), la cual concentra la lógica principal del videojuego y los componentes más relevantes desde el punto de vista arquitectónico y funcional. Este análisis permitió identificar qué tan efectivamente las pruebas unitarias desarrolladas validan el comportamiento del sistema y qué tan protegida se encuentra la lógica principal frente a posibles errores o regresiones futuras.
 
 El proceso de análisis fue realizado utilizando JaCoCo integrado mediante EclEmma en Eclipse, permitiendo medir la cantidad de instrucciones ejecutadas durante la ejecución de las pruebas automatizadas implementadas con JUnit. Gracias a esta herramienta fue posible identificar las clases más cubiertas, los componentes críticos correctamente validados y aquellos elementos que aún presentan oportunidades de mejora dentro del proceso de pruebas.
 
@@ -140,7 +140,48 @@ Las pruebas fueron diseñadas para validar en general
 
 ## Resultados de cobertura 
 
-Al ejecutar desde el IDE mediante ya las herramientas mencionadas obtuvimos los resultados:
+Al ejecutar desde el IDE mediante ya las herramientas mencionadas obtuvimos los resultados que se muestran en la imagen adjunta:
+
+<img width="763" height="145" alt="image" src="https://github.com/user-attachments/assets/296cee49-5688-4dd1-9b7e-4407ace4a9e2" />
+
+Podemos ver que la herramienta nos arroja un porcentaje e información por cada capa que tenemops, pero como se ha mencionado nos vamos a centrar en la capa de Domain, por lo que se ve que se obtuvo una cobertura de 81.5% y si se hace una inspección especifica dentro de cada clas podemos ver cuanta cobertura hay por cada clase especifica de la capa:
+
+ <img width="948" height="656" alt="image" src="https://github.com/user-attachments/assets/aad6f51e-54be-4396-8d84-cbd1b79e5037" />
+
+ Por lo tanto estos resultados y el porcentaje obtenido demuestra un nivel sólido de validación sobre los componentes más importantes de la lógica del videojuego.
+
+Las pruebas ejecutadas cubren funcionalidades relacionadas con:
+
+* Interacción entre objetos
+* Detección de colisiones
+* Movimiento de entidades
+* Comportamiento de inteligencia artificial
+* Gestión de niveles
+* Recolección de monedas
+* Activación de checkpoints
+* Transiciones de estado del juego
+* Persistencia y carga de mapas
+
+## Observaciones a partir de resultados
+
+El análisis de cobertura realizado se centró principalmente en la capa de dominio del proyecto, debido a que esta concentra la lógica principal del videojuego y los componentes más relevantes desde el punto de vista arquitectónico y funcional.
+
+Durante el proceso de pruebas se identificó que algunos componentes gráficos pertenecientes a la capa presentacion presentan una complejidad considerable para su automatización mediante pruebas unitarias tradicionales, especialmente aquellos relacionados con:
+
+* renderizado gráfico
+* manejo de eventos Swing
+* interacción visual
+* temporizadores asociados a la interfaz
+
+Por esta razón, el enfoque principal del análisis fue validar exhaustivamente la lógica de negocio y las reglas del juego, priorizando los componentes críticos del sistema.
+
+Adicionalmente, durante el desarrollo se realizaron múltiples procesos de refactorización orientados a mejorar la arquitectura orientada a objetos del proyecto. Como resultado de estas mejoras, algunas clases heredadas de versiones iniciales fueron eliminadas o reemplazadas por nuevas abstracciones más adecuadas, permitiendo aumentar la calidad general del sistema y optimizar la cobertura de pruebas.
+
+También debe considerarse que, debido a la naturaleza dinámica del videojuego y a la presencia de inteligencia artificial, existen comportamientos difíciles de cubrir completamente mediante pruebas unitarias determinísticas, especialmente aquellos asociados a decisiones automáticas y eventos dependientes del tiempo de ejecución.
+
+A pesar de estas limitaciones, la cobertura obtenida logra validar de forma satisfactoria las funcionalidades más importantes y críticas del sistema logrando así un porcentaje alto que cumple con lo que se piden en los requisitos del juego y enunciados del proyecto.
+
+
 
 
 
