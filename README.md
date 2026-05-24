@@ -339,6 +339,51 @@ Por ejemplo, CollisionManager puede trabajar de manera genérica con cualquier o
 
 La utilización de polimorfismo permitió además facilitar la extensibilidad futura del sistema y reducir considerablemente el acoplamiento entre componentes.
 
+## Conclusiones
+
+La utilización de patrones de diseño permitió construir una arquitectura considerablemente más organizada, modular y extensible. Estos patrones ayudaron a reducir duplicación, disminuir acoplamiento entre clases y facilitar la evolución progresiva del sistema a lo largo del desarrollo del proyecto.
+
+La implementación de estrategias dinámicas, fábricas de objetos, jerarquías abstractas e interfaces contribuyó directamente a mejorar la calidad del código y fortalecer la aplicación de principios de Programación Orientada a Objetos dentro del videojuego.
+
+En conjunto, los patrones utilizados permitieron desarrollar una solución más flexible y mantenible, preparada para soportar nuevas funcionalidades y futuras extensiones sin afectar significativamente los componentes ya implementados.
+
+# Lecciones y temas aprendidos con el proyecto
+
+## 1. Trabajo en Equipo
+
+Uno de los aprendizajes más importantes obtenidos durante el desarrollo del proyecto fue la importancia del trabajo en equipo dentro de proyectos de software de mediana complejidad. A lo largo del desarrollo fue necesario coordinar decisiones relacionadas con arquitectura, diseño UML, distribución de responsabilidades y organización del código fuente entre los dos integrantes del grupo Cristian Moreno y David . Esto permitió fortalecer habilidades de comunicación, planificación y colaboración técnica, entendiendo que la construcción de un sistema funcional depende no solo de la programación individual, sino también de la capacidad de mantener coherencia y sincronización entre los diferentes integrantes del equipo. Siguiendo tambien las practicas XP se logró completar el proyecto
+
+Asimismo, el uso de herramientas de control de versiones como Git y GitHub permitió comprender mejor la importancia de la integración de cambios, manejo de conflictos y organización colaborativa del código, aspectos fundamentales dentro del desarrollo profesional de software.
+
+## 2. Aplicación de Principios SOLID y Pilares de la Programación Orientada a Objetos
+
+El proyecto permitió reforzar significativamente el uso de principios de Programación Orientada a Objetos y conceptos relacionados con diseño de software mantenible. A medida que el sistema evolucionó, se hizo evidente la necesidad de aplicar adecuadamente abstracción, encapsulamiento, herencia y polimorfismo para evitar duplicación de código y mejorar la extensibilidad de la arquitectura.
+
+Del mismo modo, el proceso de refactorización ayudó a comprender la importancia de principios SOLID dentro de proyectos reales, especialmente aspectos relacionados con responsabilidad única, programación orientada a interfaces y apertura a extensión sin modificar componentes existentes. La implementación de interfaces, clases abstractas y patrones de diseño permitió construir una arquitectura mucho más modular, desacoplada y preparada para futuras ampliaciones.
+
+## 3. Manejo del Tiempo y Organización del Desarrollo
+
+Otra lección importante obtenida durante el proyecto fue la necesidad de realizar una adecuada gestión del tiempo y planificación del desarrollo. A medida que el sistema incrementó su complejidad, se evidenció que tareas como refactorización, pruebas, documentación, diagramas UML y corrección de errores requieren una cantidad considerable de tiempo adicional que inicialmente puede subestimarse.
+
+El proyecto permitió comprender la importancia de organizar correctamente las etapas de desarrollo, dividir responsabilidades y mantener avances constantes para evitar acumulación de trabajo en fases finales. Asimismo, se aprendió que dedicar tiempo temprano a una buena arquitectura y organización del código reduce significativamente problemas posteriores relacionados con mantenimiento y escalabilidad.
+
+## 4. Seguimiento de Instrucciones y Retroalimentación
+
+Durante el desarrollo del proyecto también se fortaleció la capacidad de interpretar correctamente enunciados, requisitos funcionales y recomendaciones realizadas durante las sustentaciones. Inicialmente, varias decisiones arquitectónicas fueron planteadas de manera más simple; sin embargo, la retroalimentación recibida permitió identificar oportunidades de mejora relacionadas con el uso de herencia, interfaces, patrones de diseño y organización del sistema.
+
+Este proceso permitió comprender la importancia de analizar cuidadosamente los requerimientos antes de implementar soluciones y de utilizar las observaciones realizadas por el profesor como oportunidades para fortalecer la calidad técnica del proyecto. Gracias a esto, la arquitectura evolucionó progresivamente hacia una solución más modular, extensible y alineada con buenas prácticas de ingeniería de software.
+
+## 5. Uso de Diferentes Entornos de Desarrollo (IDE)
+
+El proyecto también permitió adquirir experiencia utilizando diferentes entornos de desarrollo y herramientas de edición como Eclipse y Visual Studio Code. Esto ayudó a comprender las ventajas y limitaciones de cada entorno dependiendo de las necesidades específicas del proyecto, especialmente en aspectos relacionados con depuración, ejecución de pruebas, integración con Git, manejo de proyectos Java y edición rápida de archivos.
+
+Además, trabajar con distintos IDEs permitió fortalecer la capacidad de adaptación y asegurar que el proyecto pudiera mantenerse funcional independientemente de la herramienta utilizada para editar o ejecutar el código. Esta experiencia resultó valiosa para entender la importancia de desarrollar proyectos portables y correctamente organizados, facilitando futuras migraciones o integraciones dentro de otros entornos de desarrollo.
+
+
+
+
+
+
 
 
 
