@@ -148,7 +148,7 @@ Podemos ver que la herramienta nos arroja un porcentaje e información por cada 
 
  <img width="948" height="656" alt="image" src="https://github.com/user-attachments/assets/aad6f51e-54be-4396-8d84-cbd1b79e5037" />
 
- Por lo tanto estos resultados y el porcentaje obtenido demuestra un nivel sólido de validación sobre los componentes más importantes de la lógica del videojuego.
+ Por lo tanto estos resultados y el porcentaje obtenido demuestra un nivel sólido de validación sobre los componentes más importantes de la lógica del videojuego donde algunos clases podemos osbservar que logramos su cobertura del 100% mientras que otras estan muy cerca de estarlo.
 
 Las pruebas ejecutadas cubren funcionalidades relacionadas con:
 
@@ -180,6 +180,32 @@ Adicionalmente, durante el desarrollo se realizaron múltiples procesos de refac
 También debe considerarse que, debido a la naturaleza dinámica del videojuego y a la presencia de inteligencia artificial, existen comportamientos difíciles de cubrir completamente mediante pruebas unitarias determinísticas, especialmente aquellos asociados a decisiones automáticas y eventos dependientes del tiempo de ejecución.
 
 A pesar de estas limitaciones, la cobertura obtenida logra validar de forma satisfactoria las funcionalidades más importantes y críticas del sistema logrando así un porcentaje alto que cumple con lo que se piden en los requisitos del juego y enunciados del proyecto.
+
+## Evaluación de calidad
+
+La cobertura final obtenida sobre la capa de dominio fue del 81%, resultado que evidencia un nivel alto de validación sobre la lógica principal del videojuego. Este porcentaje demuestra que las funcionalidades más críticas del sistema fueron sometidas a pruebas exhaustivas, permitiendo verificar el comportamiento correcto de múltiples componentes esenciales dentro de la arquitectura del proyecto.
+
+A lo largo del proceso de pruebas se logró validar correctamente la interacción entre entidades, el manejo de colisiones, la gestión de niveles, los diferentes modos de juego, la persistencia y el comportamiento de la inteligencia artificial implementada. De igual forma, las pruebas permitieron comprobar el correcto funcionamiento de varias jerarquías de clases construidas mediante herencia y polimorfismo, fortaleciendo la confiabilidad general del sistema.
+
+La mejora progresiva de la cobertura estuvo acompañada por procesos constantes de refactorización y optimización arquitectónica. Durante el desarrollo se eliminaron componentes obsoletos y se reemplazaron por abstracciones más adecuadas al dominio del videojuego, permitiendo incrementar tanto la mantenibilidad del código como la calidad de las pruebas realizadas. Esto contribuyó directamente a obtener un diseño más modular, extensible y coherente con los principios de Programación Orientada a Objetos.
+
+El porcentaje alcanzado resulta especialmente satisfactorio considerando la complejidad del proyecto, la presencia de múltiples entidades dinámicas, el uso de inteligencia artificial, la integración de persistencia y la existencia de una capa gráfica basada en Swing. A pesar de las limitaciones propias de las interfaces gráficas y de ciertos comportamientos dinámicos difíciles de automatizar completamente, la lógica principal del sistema logró ser validada de manera sólida y consistente.
+
+En términos generales, los resultados obtenidos evidencian que el proyecto mantiene un nivel adecuado de robustez, estabilidad y mantenibilidad, reflejando una arquitectura diseñada bajo buenas prácticas de ingeniería de software y un enfoque claro hacia la calidad del código y la capacidad de evolución futura del sistema.
+
+
+## Conclusiones
+
+El análisis de cobertura de pruebas permitió validar de forma efectiva el comportamiento de los componentes más importantes del proyecto, especialmente aquellos pertenecientes a la capa de dominio.
+
+La utilización de pruebas unitarias junto con herramientas de análisis como JaCoCo facilitó la detección temprana de errores, la validación de reglas de negocio y la mejora continua de la arquitectura del sistema a lo largo del desarrollo.
+
+Los resultados obtenidos evidencian que la lógica principal del videojuego posee un comportamiento estable y consistente frente a distintos escenarios de ejecución, permitiendo garantizar un nivel adecuado de confiabilidad sobre funcionalidades críticas como movimiento, colisiones, interacción entre entidades, gestión de niveles, inteligencia artificial y persistencia.
+
+Asimismo, el proceso de pruebas contribuyó significativamente a fortalecer la modularidad y extensibilidad del proyecto, favoreciendo la incorporación de nuevas funcionalidades sin afectar el comportamiento existente del sistema.
+
+Finalmente, la cobertura alcanzada demuestra que la arquitectura implementada fue diseñada considerando criterios de calidad de software, mantenibilidad y capacidad de prueba, consolidando un proyecto estructurado bajo buenas prácticas de ingeniería de software y nuestra materia de Desarollo Orientado por Objetos.
+
 
 
 
