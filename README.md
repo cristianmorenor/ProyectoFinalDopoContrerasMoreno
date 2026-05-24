@@ -1,5 +1,5 @@
 # ProyectoFinalDopoContrerasMoreno
-Repositorio del proyecto final de dopo 2026-1
+## Repositorio del proyecto final de dopo 2026-1
 
 # Reporte de Test coverage 
 
@@ -17,5 +17,130 @@ Para la realización del análisis se utilizaron herramientas ampliamente emplea
 
 De acuerdo al enunciado y las instrucciones de los enunciados el análisis de cobertura se enfocó específicamente en la capa de dominio debido a que esta contiene la lógica principal del videojuego y los componentes más críticos desde el punto de vista funcional y arquitectónico. Dentro de esta capa se encuentran elementos relacionados con manejo de colisiones, comportamiento de jugadores y enemigos, gestión de niveles, inteligencia artificial, persistencia y reglas generales del juego.
 
+Las clases probadas se pueden observar en la carpeta de test de este repositorio:
+
+<img width="355" height="370" alt="image" src="https://github.com/user-attachments/assets/214fdf7d-9637-4656-a1e5-b0f935af6324" />
+
 La capa de presentación no fue considerada dentro del análisis principal debido a que contiene componentes gráficos desarrollados con Swing y lógica de renderizado cuya automatización mediante pruebas unitarias tradicionales resulta considerablemente más compleja y menos representativa desde el punto de vista de la lógica de negocio.
+
+Los principales componentes probados se pueden ver en la carpeta de Test en este repositorio, sin embargo acá se va a explicar porque la atención especifica en estas clases:
+
+- **CollisionManager**
+
+Esta clase fue priorizada debido a que centraliza la lógica de colisiones del videojuego, una de las funcionalidades más críticas del sistema. Al tratarse del núcleo de interacción entre objetos del juego, cualquier error en esta clase impactaría directamente la experiencia de juego.
+Las pruebas realizadas permitieron validar correctamente:
+
+* interacción entre entidades
+* detección de colisiones
+* pérdida de vidas
+* activación de checkpoints
+* recolección de objetos
+* condiciones de victoria o derrota.
+
+
+- **Game**
+
+La clase Game fue probada debido a que coordina el flujo general de la aplicación y administra el estado global del juego y tambien posee alta responsabilidad dentro de la arquitectura, por lo que asegurar su correcto funcionamiento era fundamental.
+
+Las pruebas verificaron:
+
+* transición entre niveles
+* reinicio de partidas
+* control de muertes
+* cambios de estado del sistema.
+
+
+- **Level**
+
+Debido a su alto acoplamiento y relevancia estructural, esta clase recibió un enfoque importante dentro de la estrategia de pruebas puesto que la clase Level representa el centro de composición de entidades dentro del dominio, administrando:
+
+* jugadores
+* enemigos
+* monedas
+* paredes
+* checkpoints
+* bombas
+* zonas seguras
+* demás componentes del mapa.
+
+Las pruebas realizadas validaron principalmente la carga correcta de entidades, gestión de objetos, interacción entre componentes, y consistencia del estado interno del nivel por lo que fue en nuestra opinión la clase más importante a probar 
+
+
+- **Player**
+
+Dado que el jugador representa la entidad principal controlada por el usuario, asegurar su estabilidad era indispensable para el correcto funcionamiento del juego.
+
+La clase Player fue probada para garantizar el correcto comportamiento del jugador dentro del mapa.
+Las pruebas validaron principalmente:
+
+* movimiento
+* límites del escenario
+* reinicio de posición
+* colisiones
+* actualización de estado
+
+
+
+- **Enemy y sus Subclases**
+
+La jerarquía Enemy fue una de las principales prioridades de prueba debido a que implementa:
+
+* herencia
+* polimorfismo
+* comportamiento dinámico
+* distintos patrones de movimiento
+
+Las pruebas permitieron validar las cosas importantes que respetaran el diseño que se realizó y los comportamientos:
+
+* movimiento horizontal y vertical
+* cambios de dirección
+* velocidades distintas
+* comportamiento especializado según cada tipo de enemigo
+
+
+- **MapLoader**
+
+La clase MapLoader fue probada debido a su responsabilidad dentro de la capa de persistencia y carga de niveles.
+Las pruebas verificaron:
+
+* lectura correcta de mapas
+* creación adecuada de entidades
+* manejo de archivos
+* control de errores durante la carga
+
+Esto permitió validar la robustez del sistema frente a configuraciones inválidas o problemas de persistencia.
+
+- **GameMode**
+
+Las implementaciones de GameMode fueron probadas debido a que representan las distintas estrategias de funcionamiento del juego, aplicando el patrón de diseño Strategy.
+
+Las pruebas verificaron comportamiento de los diferentes modos, correcta separación de responsabilidades y cambios dinámicos en la lógica de juego según el modo seleccionado.
+
+- **AIPlayer**
+
+Las clases relacionadas con AIPlayer fueron probadas debido a que implementan lógica de inteligencia artificial para los jugadores controlados por máquina. Las pruebas permitieron validar toma de decisiones, comportamiento automático y respuesta de la IA frente a distintos estados del entorno.
+
+Estas pruebas fueron especialmente importantes debido a la naturaleza dinámica y variable del comportamiento automatizado.
+
+
+## Estrategia de pruebas
+
+La estrategia de pruebas que se tomó fue la de que se priorizó la validación de la lógica de dominio de forma independiente a la interfaz gráfica.
+
+Este enfoque sigue buenas prácticas de ingeniería de software al separar la respectiva lógica de negocio, presentación y persistencia
+
+Las pruebas fueron diseñadas para validar en general 
+
+* salidas esperadas
+* cambios de estado
+* colisiones
+* comportamiento polimórfico
+* manejo de situaciones excepcionales
+
+
+## Resultados de cobertura 
+
+Al ejecutar desde el IDE mediante ya las herramientas mencionadas obtuvimos los resultados:
+
+
 
